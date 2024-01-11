@@ -1,0 +1,8 @@
+1.Computer is a device which which takes some input and performs some operations and returns some output.A computer is a machine that can be programmed to carry out sequences of arithmetic or logical operations automatically.
+2.RAM(Random access memory) is a hardware part of computer memory.RAM usually gives the data to CPU to perform operation from secondary memory.It is faster than secondary memory.It is volatile means when power suppy cuts all the data working on will be lost.
+3.Data generally stored in the secondary memory(HDD,SSD).
+4.Keyboard
+5.Output devices are those devices through which computer gives output ex-Monitor,speaker,printer etc.
+6.Mouse or trackpad.
+7.Binary (0,1)
+8.Input devices are those devices through which computer takes some input ex-keyboard,scanner,webcam,voice recorder.
