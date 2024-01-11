@@ -1,0 +1,9 @@
+1.Git is a version control system through which we can share our code with our team or anyone.by making a repositery.
+2.In version control system we share our code in remote location so that if we looses our actual codespace than we can access that code or share with our team and after changing in code save both the code before and after change.
+3.Github is a open source software application through which we share or save our codes in any repositery.
+4.commit,update,push,pull 
+5.There are two types of version control system 
+a.centralized version control system b.distributed version control system.
+6.By using git as a version control system we can save and update our code in cloud or in remote location.
+7.In git repositery so many files we stores.
+8.first we make a repositery and upload our saved file or instant commit there anything than click on commit changes.
