@@ -1,0 +1,308 @@
+﻿Assignment solution for Array & Complexity
+For 1D array-
+Solution 1-
+
+
+public class Sum_Even_indices
+{
+   public static void main(String[] args) {
+       int[]arr={4,2,6,8,3};//0,1,2,3,4=4+6+3
+       int sum=0;
+       for(int i=0; i<arr.length; i++){
+           if(i%2==0){
+               sum=sum+arr[i];
+           }
+       }
+       System.out.println(sum);
+   }
+}
+
+
+Solution 2-
+
+
+public class evenElements
+{
+   public static void main(String[] args) {
+       int [] arr={2,3,6,7,9};
+       for(int evens : arr){
+           if(evens%2==0){
+               System.out.println(evens);
+           }
+       }
+   }
+}
+
+
+
+
+Solution 3 -
+
+
+public class maxElement
+{
+   public static void main(String[] args)
+   {
+       int[] arr={3,6,2,7,5};
+       //biggest element of array
+       int max = arr[0];
+       for (int i = 0; i < arr.length; i++) {
+           if(arr[i] > max)
+               max = arr[i];
+       }
+       System.out.println(max);
+       /* SECOND APPROACH
+       int []arr={2,6,9,7,3};
+       Arrays.sort(arr);
+       System.out.println(arr[arr.length-1]);*/
+   }
+}
+
+
+Solution 4 -
+
+
+import java.util.Arrays;
+
+
+public class second_max_element
+{
+   public static void main(String[] args)
+   {
+       int []arr={2,6,9,7,3};
+       Arrays.sort(arr);
+       System.out.println(arr[arr.length-2]);
+   }
+}
+
+
+
+
+Solution 5 -
+
+
+public class peekElement {
+   public static void main(String[] args) {
+       int[] arr = {2, 5, 7, 4, 1};
+
+
+       // Check each element to see if it's a peak
+       for (int i = 0; i < arr.length; i++) {
+           boolean isLeftGreater=(i>0 && arr[i]>arr[i-1]);
+           boolean isRightGreater=(i<arr.length-1 && arr[i]>arr[i+1]);
+
+
+           if (isLeftGreater && isRightGreater) {
+               System.out.println(arr[i]);
+           }
+       }
+   }
+}
+
+
+
+
+For 2D Array-
+Solution 1 - 
+
+
+import java.util.*;
+public class firstQuestion {
+   public static void main(String[] args)
+   {
+       Scanner sc=new Scanner(System.in);
+       int m=sc.nextInt();
+       int n=sc.nextInt();
+       int [][]arr=new int[m][n];
+       for(int i=0;i<m;i++){
+           for(int j=0;j<n;j++){
+               arr[i][j]=sc.nextInt();
+           }
+       }
+       for(int i=0; i<m; i++){
+           for(int j=0; j<n; j++){
+               System.out.print(arr[i][j]+" ");
+           }
+           System.out.println();
+       }
+       int positive_numbers=0;
+       int negative_numbers=0;
+       int odd_numbers=0;
+       int even_numbers=0;
+       int numberZero=0;
+       for(int i=0;i<n;i++){
+           for(int j=0; j<n; j++){
+               if(arr[i][j]>0){
+                   positive_numbers++;
+               }
+               if(arr[i][j]<0){
+                   negative_numbers++;
+               }
+               if(arr[i][j]%2!=0){
+                   odd_numbers++;
+               }
+               if(arr[i][j]%2==0){
+                   even_numbers++;
+               }
+               if(arr[i][j]==0){
+                   numberZero++;
+               }
+           }
+       }
+       System.out.println("positive integers are : "+positive_numbers);
+       System.out.println("negative integers are: "+negative_numbers);
+       System.out.println("odd numbers are: "+odd_numbers);
+       System.out.println("even numbers integers are: "+even_numbers);
+       System.out.println("Number of Zeros are: "+numberZero);
+
+
+   }
+}
+
+
+
+
+Solution 2 - 
+
+
+import java.util.*;
+public class Q2aboveSecondayDigonal {
+   public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       int m=sc.nextInt();
+       int n=sc.nextInt();
+       int[][]arr=new int[m][n];
+       for(int i=0; i<m; i++){
+           for(int j=0; j<n; j++){
+               arr[i][j]=sc.nextInt();
+           }
+       }
+       for(int i=0;i<m; i++){
+           for(int j=0; j<n; j++){
+               if(i+j<m-1){
+                   System.out.print(arr[i][j]+" ");
+               }
+           }
+       }
+   }
+}
+
+
+Solution 3 -
+
+
+
+
+import java.io.*;
+import java.util.*;
+public class Q3bothdigonal{
+   public static void main(String args[]){
+       int m,n;
+       Scanner sc=new Scanner(System.in);
+       System.out.print("enter the number of rows : ");
+       m=sc.nextInt();
+       System.out.print("enter the number of column : ");
+       n=sc.nextInt();
+       int arr[][]=new int[m][n];
+
+
+       int i,j;
+
+
+       System.out.println("enter the  matrix element : ");
+       for(i = 0 ; i < m ; i++){
+           for(j = 0 ; j < n ; j++){
+               arr[i][j]=sc.nextInt();
+           }
+       }
+
+
+       System.out.println("Elements of both the diagonals are as follows : ");
+       for(i = 0 ; i < m ; i++){
+           System.out.print(arr[i][i] + "  ");
+
+
+           if(i != m-1-i)
+               System.out.print(arr[i][m-1-i] + "  ");
+       }
+   }
+
+
+}
+
+
+Solution 4 -
+
+
+import java.util.*;
+public class largestOf2D
+{
+   public static void main(String[] args)
+   {
+       Scanner sc=new Scanner(System.in);
+       int m=sc.nextInt();
+       int n=sc.nextInt();
+       int [][]arr=new int[m][n];
+       for(int i=0;i<m;i++){
+           for(int j=0;j<n;j++){
+               arr[i][j]=sc.nextInt();
+           }
+       }
+       for(int i=0; i<m; i++){
+           for(int j=0; j<n; j++){
+               System.out.print(arr[i][j]+" ");
+           }
+           System.out.println();
+       }
+       int largest=arr[0][0];
+       for(int i=0; i<m; i++){
+           for(int j=0; j<n; j++){
+               if(arr[i][j]>largest){
+                   largest=arr[i][j];
+               }
+           }
+       }
+       System.out.println("largest element is"+largest);
+   }
+}
+
+
+
+
+Solution 5 - 
+import java.io.*;
+import java.util.*;
+public class bothDIogonalQ3{
+   public static void main(String args[]){
+
+
+       int m,n;
+       Scanner sc=new Scanner(System.in);
+       System.out.print("enter the number of rows : ");
+       m=sc.nextInt();
+
+
+       int arr[][]=new int[m][m];
+
+
+       int i,j;
+
+
+       System.out.println("enter the  matrix element : ");
+       for(i = 0 ; i < m ; i++){
+           for(j = 0 ; j < m ; j++){
+               arr[i][j]=sc.nextInt();
+           }
+       }
+
+
+       System.out.println("The elements  of the middle row and middle column are as follows : ");
+
+
+       for(i = 0 ; i < m ; i++)System.out.print(arr[i][m/2] + "  ");
+       for(j = 0 ; j < m ; j++){
+           if(j == m/2)continue;
+           System.out.print(arr[m/2][j] + "  ");
+       }
+   }
+}
